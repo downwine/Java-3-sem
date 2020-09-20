@@ -30,7 +30,7 @@ public class Main {
         Arm arm = new Arm(d,h);
         if (arm.wave())
             System.out.println("Вам махнули.");
-        else System.out.println("вам не махнули.");
+        else System.out.println("Вам не махнули.");
         System.out.println(arm);
         System.out.println("Введите размер и имя руки: ");
         d = in.nextInt();
@@ -38,7 +38,7 @@ public class Main {
         arm = new Arm(d,h);
         if (arm.wave())
             System.out.println("Вам махнули.");
-        else System.out.println("вам не махнули.");
+        else System.out.println("Вам не махнули.");
         System.out.println(arm);
     }
 }
