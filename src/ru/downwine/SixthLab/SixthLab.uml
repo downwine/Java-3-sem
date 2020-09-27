@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>ru.downwine.SixthLab</OriginalElement>
+  <nodes>
+    <node x="9.125" y="170.0">ru.downwine.SixthLab.MovablePoint</node>
+    <node x="149.56845238095235" y="0.0">ru.downwine.SixthLab.Movable</node>
+    <node x="136.16666666666663" y="779.0">ru.downwine.SixthLab.Main</node>
+    <node x="339.56845238095235" y="0.0">ru.downwine.SixthLab.Rectangle</node>
+    <node x="0.0" y="496.0">ru.downwine.SixthLab.MovableRectangle</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ru.downwine.SixthLab.MovableRectangle" target="ru.downwine.SixthLab.Movable">
+      <point x="100.875" y="-116.5" />
+      <point x="235.375" y="471.0" />
+      <point x="229.24404761904762" y="471.0" />
+      <point x="229.24404761904762" y="145.0" />
+      <point x="222.06845238095235" y="145.0" />
+      <point x="0.0" y="60.0" />
+    </edge>
+    <edge source="ru.downwine.SixthLab.MovablePoint" target="ru.downwine.SixthLab.Movable">
+      <point x="0.0" y="-138.0" />
+      <point x="111.625" y="145.0" />
+      <point x="173.73511904761904" y="145.0" />
+      <point x="-48.33333333333334" y="60.0" />
+    </edge>
+    <edge source="ru.downwine.SixthLab.MovableRectangle" target="ru.downwine.SixthLab.MovablePoint">
+      <point x="-100.875" y="-116.5" />
+      <point x="33.625" y="471.0" />
+      <point x="43.29166666666666" y="471.0" />
+      <point x="-68.33333333333333" y="138.0" />
+    </edge>
+    <edge source="ru.downwine.SixthLab.Main" target="ru.downwine.SixthLab.MovableRectangle">
+      <point x="-37.49999999999997" y="-27.0" />
+      <point x="173.66666666666669" y="754.0" />
+      <point x="134.5" y="754.0" />
+      <point x="0.0" y="116.5" />
+    </edge>
+    <edge source="ru.downwine.SixthLab.Main" target="ru.downwine.SixthLab.Movable">
+      <point x="37.50000000000003" y="-27.0" />
+      <point x="248.66666666666669" y="754.0" />
+      <point x="279.5" y="754.0" />
+      <point x="279.5" y="145.0" />
+      <point x="270.4017857142857" y="145.0" />
+      <point x="48.33333333333337" y="60.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8" x="194.5" y="434.75" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
