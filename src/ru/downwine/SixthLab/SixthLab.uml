@@ -11,6 +11,12 @@
   </nodes>
   <notes />
   <edges>
+    <edge source="ru.downwine.SixthLab.MovableRectangle" target="ru.downwine.SixthLab.MovablePoint">
+      <point x="-100.875" y="-116.5" />
+      <point x="33.625" y="471.0" />
+      <point x="43.29166666666666" y="471.0" />
+      <point x="-68.33333333333333" y="138.0" />
+    </edge>
     <edge source="ru.downwine.SixthLab.MovableRectangle" target="ru.downwine.SixthLab.Movable">
       <point x="100.875" y="-116.5" />
       <point x="235.375" y="471.0" />
@@ -25,29 +31,11 @@
       <point x="173.73511904761904" y="145.0" />
       <point x="-48.33333333333334" y="60.0" />
     </edge>
-    <edge source="ru.downwine.SixthLab.MovableRectangle" target="ru.downwine.SixthLab.MovablePoint">
-      <point x="-100.875" y="-116.5" />
-      <point x="33.625" y="471.0" />
-      <point x="43.29166666666666" y="471.0" />
-      <point x="-68.33333333333333" y="138.0" />
-    </edge>
-    <edge source="ru.downwine.SixthLab.Main" target="ru.downwine.SixthLab.MovableRectangle">
-      <point x="-37.49999999999997" y="-27.0" />
-      <point x="173.66666666666669" y="754.0" />
-      <point x="134.5" y="754.0" />
-      <point x="0.0" y="116.5" />
-    </edge>
-    <edge source="ru.downwine.SixthLab.Main" target="ru.downwine.SixthLab.Movable">
-      <point x="37.50000000000003" y="-27.0" />
-      <point x="248.66666666666669" y="754.0" />
-      <point x="279.5" y="754.0" />
-      <point x="279.5" y="145.0" />
-      <point x="270.4017857142857" y="145.0" />
-      <point x="48.33333333333337" y="60.0" />
-    </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.8" x="194.5" y="434.75" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="0.7854630715123095" x="310.0" y="416.5" />
+  <SelectedNodes>
+    <node>ru.downwine.SixthLab.MovablePoint</node>
+  </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
     <Category>Constructors</Category>
