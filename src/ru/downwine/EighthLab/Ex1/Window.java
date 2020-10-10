@@ -53,7 +53,6 @@ public class Window extends JFrame {
                     break;
                 }
             }
-
         }
     }
 
