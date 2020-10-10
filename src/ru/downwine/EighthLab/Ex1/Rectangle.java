@@ -1,44 +1,36 @@
 package ru.downwine.EighthLab.Ex1;
 
 import java.awt.*;
-import java.awt.*;
 
-public class Rectangle extends Shape{
-    private int width, length;
+public class Rectangle extends Shape {
+    private int length, width;
 
-    public Rectangle() {
+    public Rectangle() throws HeadlessException {
+        setLength();
+        setWidth();
+    }
+
+    public void setWidth() {
+        this.width = (int)(Math.random() * 150);
+    }
+
+    public void setLength() {
+        this.length = (int)(Math.random() * 150);
     }
 
     public int getWidth() {
         return width;
     }
 
-    public void setWidth() {
-        this.width = (int)(Math.random()*300);
-    }
-
     public int getLength() {
         return length;
     }
 
-    public void setLength() {
-        this.length = (int)(Math.random()*300);
-    }
-
-    public void paintComponents(Graphics gr){
-        gr.setColor(new Color(rand.nextFloat(), rand.nextFloat(), rand.nextFloat()));
-        gr.drawRect(getX(), getY(), getWidth(), getLength());
-    }
-}
-
-/*
-public class Rectangle extends Shape {
-    private int length, width;
-
     @Override
-    public void paint(Graphics gr) {
+    public void paintF(Graphics gr) {
         Graphics2D g = (Graphics2D) gr;
-
+        g.setPaint(getColor());
+        g.fillRect(getX(), getY(), getLength() , getWidth());
     }
 
-}*/
+}

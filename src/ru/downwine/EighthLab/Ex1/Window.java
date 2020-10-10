@@ -1,24 +1,6 @@
 package ru.downwine.EighthLab.Ex1;
 
-import javax.swing.*;
-import java.awt.*;
-
-public class Window extends JFrame {
-    public Window() {
-        MyPanel mp = new MyPanel();
-        Container cont = getContentPane();
-        cont.add(mp);
-        setBounds(0, 0, 1800, 1000);
-        setTitle("Это моё первое окно, не судите строго");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-
-    public static void main(String[] args) {
-        Window window = new Window();
-        window.setVisible(true);
-    }
-}
-/*import java.awt.*; //импортируем всё содержимое пакетов
+import java.awt.*; //импортируем всё содержимое пакетов
 //обеспечивает взаимодействие программ на Java с графической подсистемой операционной системы
 //позволяет графическим интерфейсам, написанным на Java задействовать графические возможности операционной системы и
 //отображаться графическим объектам, созданным в программах Java, на экране монитора
@@ -27,15 +9,9 @@ import javax.swing.*;
 //lightweight - кнопки, списки, деревья, метки, таблицы
 //heavyweight - окна
 //вместо import java.awt.Window; import javax.swing.JFrame;
-import java.awt.event.*;
-import java.awt.image.ImageObserver;
-import java.text.AttributedCharacterIterator;
 
 public class Window extends JFrame {
-    Rectangle r;
-    Oval o;
-    Circle c;
-    Square s;
+    Shape r, o, c, s;
     //В классе JFrame определены основные свойства и поведение «стандартных» графических окон
     public Window () {
         setTitle ("Это моё первое окно, не судите строго"); //Название вверху окна
@@ -53,30 +29,31 @@ public class Window extends JFrame {
     }
 
     public void paint(Graphics g) {
-        Shape o = new Oval();
-        Shape s = new Square();
-        Shape r = new Rectangle();
-        Shape c = new Circle();
         for (int i = 0; i < 20; i++) {
             int k = (int) (Math.random() * 4);
-            switch(k) {
+            switch (k) {
                 case 0: {
-                    o.paint(g);
+                    o = new Oval();
+                    o.paintF(g);
                     break;
                 }
                 case 1: {
-                    s.paint(g);
+                    s = new Square();
+                    s.paintF(g);
                     break;
                 }
                 case 2: {
-                    r.paint(g);
+                    r = new Rectangle();
+                    r.paintF(g);
                     break;
                 }
                 case 3: {
-                    c.paint(g);
+                    c = new Circle();
+                    c.paintF(g);
                     break;
                 }
             }
+
         }
     }
 
@@ -85,7 +62,6 @@ public class Window extends JFrame {
         catch (Exception lfe) {}
         //Теперь внешний вид окна соответствовует стандарту, принятому в конкретной операционной системе
         Window w = new Window(); //Создание окна
-
     }
+
 }
-*/

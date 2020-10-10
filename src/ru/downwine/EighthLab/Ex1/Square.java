@@ -2,10 +2,11 @@ package ru.downwine.EighthLab.Ex1;
 
 import java.awt.*;
 
-public class Square extends Shape{
+public class Square extends Shape {
     private int side;
 
-    public Square() {
+    public Square() throws HeadlessException {
+       setSide();
     }
 
     public int getSide() {
@@ -13,20 +14,13 @@ public class Square extends Shape{
     }
 
     public void setSide() {
-        this.side = (int)(Math.random()*300);
+        this.side = (int)(Math.random() * 150);
     }
-
-    public void paintComponents(Graphics gr){
-        gr.setColor(new Color(rand.nextFloat(), rand.nextFloat(), rand.nextFloat()));
-        gr.drawRect(getX(), getY(), getSide(), getSide());
-    }
-}
-/*
-public class Square extends Shape {
-    private int side;
 
     @Override
-    public void paint(Graphics gr) {
+    public void paintF(Graphics gr) {
         Graphics2D g = (Graphics2D) gr;
+        g.setPaint(getColor());
+        g.fillRect(getX(), getY(), getSide(), getSide());
     }
-}*/
+}
