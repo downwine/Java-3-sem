@@ -15,7 +15,7 @@ public class Animation implements Runnable {
     @Override
     public void run() {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(100);
             counter = (counter + 1) % abcArgs.length;
             mainWindow.selectPicture(abcArgs[counter]);
             mainWindow.paint(mainWindow.getGraphics());
