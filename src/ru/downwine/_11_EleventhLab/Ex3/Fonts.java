@@ -7,74 +7,73 @@ import java.awt.event.ActionListener;
 
 public class Fonts extends JFrame {
     public Fonts() {
-        JFrame frame = new JFrame("example");
-        Label label1 = new Label("Выберите шрифт");
-        label1.setBounds(30, 10, 320, 20);
-        label1.setFont(new Font("Times New Roman", Font.ITALIC, 15));
-        frame.add(label1);
+        JFrame window = new JFrame("Это моё 7 окно, не судите строго");
 
-        JComboBox faceCombo = new JComboBox();
-        faceCombo.setEditable(true);
-        faceCombo.addItem("Times New Roman");
-        faceCombo.addItem("MS Sans Serif");
-        faceCombo.addItem("Courier New");
-        faceCombo.setBounds(30, 40, 320, 40);
-        frame.add(faceCombo);
+        Label label1 = new Label("Выберите шрифт");
+        label1.setBounds(70, 40, 360, 20);
+        label1.setFont(new Font("Arial", Font.ITALIC, 15));
+        window.add(label1);
+
+        JComboBox fontBox = new JComboBox();
+        fontBox.setEditable(true);
+        fontBox.addItem("Times New Roman");
+        fontBox.addItem("MS Sans Serif");
+        fontBox.addItem("Courier New");
+        fontBox.setBounds(70, 70, 360, 40);
+        window.add(fontBox);
 
         Label label2 = new Label("Выберите цвет");
-        label2.setBounds(30, 90, 320, 20);
-        label2.setFont(new Font("Times New Roman", Font.ITALIC, 15));
-        frame.add(label2);
+        label2.setBounds(70, 120, 360, 20);
+        label2.setFont(new Font("Arial", Font.ITALIC, 15));
+        window.add(label2);
 
-        JComboBox faceCombo2 = new JComboBox();
-        faceCombo2.setEditable(true);
-        faceCombo2.addItem("Blue");
-        faceCombo2.addItem("Red");
-        faceCombo2.addItem("Black");
-        faceCombo2.setBounds(30, 120, 320, 40);
-        frame.add(faceCombo2);
+        JComboBox colorBox = new JComboBox();
+        colorBox.setEditable(true);
+        colorBox.addItem("Blue");
+        colorBox.addItem("Red");
+        colorBox.addItem("Black");
+        colorBox.setBounds(70, 150, 360, 40);
+        window.add(colorBox);
 
+        JTextArea text = new JTextArea("Здесь могла быть ваша реклама", 2, 3);
+        text.setFont(new Font("Arial", Font.PLAIN, 20));
+        text.setForeground(Color.BLUE);
+        text.setBounds(70, 220, 360, 40);
 
-
-        JTextArea bigField = new JTextArea("Текст", 2, 3);
-        bigField.setFont(new Font("Dialog", Font.PLAIN, 20));
-        bigField.setBackground(Color.WHITE);
-        bigField.setForeground(Color.BLUE);
-        bigField.setFont(new Font("Times New Roman", Font.BOLD, 15));
-        bigField.setBounds(30, 170, 320, 40);
-        faceCombo.addActionListener(new ActionListener() {
+        fontBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (faceCombo.getSelectedIndex()==0) {
-                    bigField.setFont(new Font("Times New Roman", Font.BOLD, 15));
+                if (fontBox.getSelectedIndex() == 0) {
+                    text.setFont(new Font("Times New Roman", Font.PLAIN, 20));
                 }
-                else if (faceCombo.getSelectedIndex()==1) {
-                    bigField.setFont(new Font("MS Sans Serif", Font.BOLD, 15));
+                else if (fontBox.getSelectedIndex() == 1) {
+                    text.setFont(new Font("MS Sans Serif", Font.PLAIN, 20));
                 }
-                else if (faceCombo.getSelectedIndex()==2) {
-                    bigField.setFont(new Font("Courier New", Font.BOLD, 15));
+                else if (fontBox.getSelectedIndex() == 2) {
+                    text.setFont(new Font("Courier New", Font.PLAIN, 20));
                 }
             }
         });
-        faceCombo2.addActionListener(new ActionListener() {
+
+        colorBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (faceCombo2.getSelectedIndex()==0) {
-                    bigField.setForeground(Color.BLUE);
+                if (colorBox.getSelectedIndex() == 0) {
+                    text.setForeground(Color.BLUE);
                 }
-                else if (faceCombo2.getSelectedIndex()==1) {
-                    bigField.setForeground(Color.RED);
+                else if (colorBox.getSelectedIndex() == 1) {
+                    text.setForeground(Color.RED);
                 }
-                else if (faceCombo2.getSelectedIndex()==2) {
-                    bigField.setForeground(Color.BLACK);
+                else if (colorBox.getSelectedIndex() == 2) {
+                    text.setForeground(Color.BLACK);
                 }
             }
         });
-        frame.add(bigField);
-        frame.setSize(400,400);
-        frame.setLayout(null);
-        frame.setVisible(true);
-        frame.setLocationRelativeTo(null);
-
+        window.add(text);
+        window.setSize(500,340);
+        window.setLayout(null);
+        window.getContentPane().setBackground(new Color(176, 196, 222));
+        window.setVisible(true);
+        window.setLocationRelativeTo(null);
     }
 }

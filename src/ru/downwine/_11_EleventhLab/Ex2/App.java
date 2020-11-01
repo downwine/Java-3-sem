@@ -7,65 +7,78 @@ import java.awt.event.ActionListener;
 
 public class App extends JFrame {
     public App() {
-        JFrame frame = new JFrame("example");
-        JButton button = new JButton("Center");
-        button.setBounds(300,300,200,200);
-        button.setBackground(Color.red);
-        JButton button2 = new JButton("North");
-        button2.setBounds(150,100,500,200);
-        button2.setBackground(Color.blue);
-        JButton button3 = new JButton("South");
-        button3.setBounds(150,500,500,200);
-        button3.setBackground(Color.CYAN);
-        JButton button4 = new JButton("East");
-        button4.setBounds(150,300,150,200);
-        button4.setBackground(Color.YELLOW);
-        JButton button5 = new JButton("West");
-        button5.setBounds(500,300,150,200);
-        button5.setBackground(Color.ORANGE);
-        frame.add(button);
-        frame.add(button2);
-        frame.add(button3);
-        frame.add(button4);
-        frame.add(button5);
-        frame.setSize(800,800);
-        frame.setLayout(null);
-        frame.setVisible(true);
-        frame.setLocationRelativeTo(null);
-        ActionListener actionListener = new ActionListener() {
+        JFrame window = new JFrame("Это моё 6 окно, не судите строго");
+
+        JPanel myPanel = new JPanel();
+        myPanel.setLayout(new BorderLayout());
+
+        JButton northButton = new JButton("NORTH");
+        myPanel.add(northButton, BorderLayout.NORTH);
+        northButton.setBackground(Color.cyan);
+        northButton.setPreferredSize(new Dimension(120,120));
+
+        JButton southButton = new JButton("SOUTH");
+        myPanel.add(southButton, BorderLayout.SOUTH);
+        southButton.setBackground(Color.orange);
+        southButton.setPreferredSize(new Dimension(120,120));
+
+        JButton eastButton = new JButton("EAST");
+        myPanel.add(eastButton, BorderLayout.EAST);
+        eastButton.setBackground(Color.green);
+        eastButton.setPreferredSize(new Dimension(120, 120));
+
+        JButton westButton = new JButton("WEST");
+        myPanel.add(westButton, BorderLayout.WEST);
+        westButton.setBackground(Color.pink);
+        westButton.setPreferredSize(new Dimension(120, 120));
+
+        JButton centerButton = new JButton("CENTER");
+        myPanel.add(centerButton, BorderLayout.CENTER);
+        centerButton.setBackground(Color.yellow);
+
+        window.getContentPane().add(myPanel);
+        window.setPreferredSize(new Dimension(900, 600));
+
+        window.pack();
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setVisible(true);
+        window.setLocationRelativeTo(null);
+
+        ActionListener actionListenerCenter = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showConfirmDialog(frame, "Добро пожаловать в ЦАО", "Оповещение", JOptionPane.DEFAULT_OPTION);
+                JOptionPane.showConfirmDialog(window, "Добро пожаловать в ЦАО", "Диалоговое окно", JOptionPane.DEFAULT_OPTION);
             }
         };
-        ActionListener actionListener2 = new ActionListener() {
+        ActionListener actionListenerNorth = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showConfirmDialog(frame, "Добро пожаловать в САО", "Оповещение", JOptionPane.DEFAULT_OPTION);
+                JOptionPane.showConfirmDialog(window, "Добро пожаловать в САО", "Диалоговое окно", JOptionPane.DEFAULT_OPTION);
             }
         };
-        ActionListener actionListener3 = new ActionListener() {
+        ActionListener actionListenerSouth = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showConfirmDialog(frame, "Добро пожаловать в ЮЗАО", "Оповещение", JOptionPane.DEFAULT_OPTION);
+                JOptionPane.showConfirmDialog(window, "Добро пожаловать в ЮАО", "Диалоговое окно", JOptionPane.DEFAULT_OPTION);
             }
         };
-        ActionListener actionListener4 = new ActionListener() {
+        ActionListener actionListenerEast = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showConfirmDialog(frame, "Добро пожаловать в СВАО", "Оповещение", JOptionPane.DEFAULT_OPTION);
+                JOptionPane.showConfirmDialog(window, "Добро пожаловать в ВАО", "Диалоговое окно", JOptionPane.DEFAULT_OPTION);
             }
         };
-        ActionListener actionListener5 = new ActionListener() {
+        ActionListener actionListenerWest = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showConfirmDialog(frame, "Добро пожаловать в ЗАО", "Оповещение", JOptionPane.DEFAULT_OPTION);
+                JOptionPane.showConfirmDialog(window, "Добро пожаловать в ЗАО", "Диалоговое окно", JOptionPane.DEFAULT_OPTION);
             }
         };
-        button.addActionListener(actionListener);
-        button2.addActionListener(actionListener2);
-        button3.addActionListener(actionListener3);
-        button4.addActionListener(actionListener4);
-        button5.addActionListener(actionListener5);
+
+        centerButton.addActionListener(actionListenerCenter);
+        northButton.addActionListener(actionListenerNorth);
+        southButton.addActionListener(actionListenerSouth);
+        eastButton.addActionListener(actionListenerEast);
+        westButton.addActionListener(actionListenerWest);
     }
 }
