@@ -1,4 +1,5 @@
 package ru.downwine._16_SixteenthLab;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ public class Drinker {
     private final static Scanner scn = new Scanner(System.in);
 
     public static void main(String[] args) {
-        short counter = 0;
+        int counter = 0;
 
         for (int i = 0; i < 5; i++)
             first.add(scn.nextInt());

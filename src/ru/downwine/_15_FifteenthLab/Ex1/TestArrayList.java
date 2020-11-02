@@ -6,7 +6,7 @@ import java.util.function.Consumer;
 
 public class TestArrayList {
     public static void main(String[] args) {
-        ArrayList <String> list = new ArrayList<>(5);
+        ArrayList <String> list = new ArrayList<>(6);
         Scanner in = new Scanner(System.in);
 
         for (int i = 0; i < 5; i++) {
@@ -15,6 +15,7 @@ public class TestArrayList {
             list.add(s);
             //list.add(i, s);
         }
+        list.add(2,"Hello");
         ArrayList <String> list2 = new ArrayList<>();
         list2.addAll(list);
 
