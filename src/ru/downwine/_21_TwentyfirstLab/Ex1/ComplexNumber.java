@@ -1,30 +1,30 @@
 package ru.downwine._21_TwentyfirstLab.Ex1;
 
 public class ComplexNumber {
-    private double Re;
-    private double Im;
+    private double re;
+    private double im;
 
     public ComplexNumber() {
     }
 
     public ComplexNumber(double re, double im) {
-        Re = re;
-        Im = im;
+        this.re = re;
+        this.im = im;
     }
 
     public void setIm(double im) {
-        Im = im;
+        this.im = im;
     }
 
     public void setRe(double re) {
-        Re = re;
+        this.re = re;
     }
 
     public double getIm() {
-        return Im;
+        return im;
     }
 
     public double getRe() {
-        return Re;
+        return re;
     }
 }

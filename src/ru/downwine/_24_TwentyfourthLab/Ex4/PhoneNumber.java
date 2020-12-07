@@ -11,7 +11,7 @@ public class PhoneNumber {
     public void Return() {
         char[] chars = number.toCharArray();
         int k = 0;
-        if (!number.contains("+")) {
+        if (!number.startsWith("+")) {
             answ += "+7";
             for (int i = 1; i < chars.length; i++) {
                 if (i == 4 || i == 7)

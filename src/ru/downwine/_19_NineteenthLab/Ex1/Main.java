@@ -15,6 +15,8 @@ public class Main {
                 System.out.println("ИНН не начинается с нуля");
             else
                 System.out.println("ИНН не должен начинаться с нуля");
+            if (inn.length() != 12)
+                System.out.println("В ИНН должно быть 12 символов");
         }
         catch (Exception ex) {
             System.out.println(ex.getMessage() + "ИНН некорректный");

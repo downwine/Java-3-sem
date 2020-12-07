@@ -1,6 +1,7 @@
 package ru.downwine._21_TwentyfirstLab.Ex1;
 
 public abstract class ComplexFactory implements AbstractFactory {
+
     @Override
     public ComplexNumber create() {
         return new ComplexNumber();

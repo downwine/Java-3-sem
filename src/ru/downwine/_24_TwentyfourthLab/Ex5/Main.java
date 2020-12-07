@@ -37,7 +37,7 @@ public class Main {
     public static boolean isValid(List<String> words) {
         for (int i = 0; i < words.size() - 1; i++) {
             String word0 = words.get(i).toLowerCase();
-            String word1 = words.get(i).toLowerCase();
+            String word1 = words.get(i+1).toLowerCase();
             if (word0.charAt(word0.length() - 1) != word1.charAt(0)) {
                 return false;
             }

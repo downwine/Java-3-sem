@@ -1,7 +1,5 @@
 package ru.downwine._24_TwentyfourthLab.Ex2;
 
-
-
 public class Address {
     private String country, region, city, street, house, housing, flat;
     private String address;
