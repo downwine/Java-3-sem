@@ -13,10 +13,10 @@ public class Main {
     private static Strategy strategy;
 
     static {
-        priceList.put(1, 75);
-        priceList.put(2, 80);
-        priceList.put(3, 60);
-        priceList.put(4, 50);
+        priceList.put(1, 6000);
+        priceList.put(2, 8000);
+        priceList.put(3, 60000);
+        priceList.put(4, 120000);
     }
 
     public static void main(String[] args) throws IOException {
@@ -26,10 +26,10 @@ public class Main {
 
             do {
                 System.out.print("Пожалуйста, выберите товар:" + "\n" +
-                        "1 - Молоко" + "\n" +
-                        "2 - Сок" + "\n" +
-                        "3 - Печенье" + "\n" +
-                        "4 - Баранки" + "\n");
+                        "1 - обычная кошка" + "\n" +
+                        "2 - редкая кошка" + "\n" +
+                        "3 - эпическая кошка" + "\n" +
+                        "4 - особая кошка" + "\n");
                 int choice = Integer.parseInt(reader.readLine());
                 cost = priceList.get(choice);
                 System.out.print("Кол-во: ");
